@@ -1,0 +1,347 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #cedfc3;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: fit-contents;
+    background-color:rgb(191, 165, 140);
+    width: 100%;
+}
+.login-registration{
+    background-color: rgb(191, 165, 140);
+    padding:60px 20px 30px 20px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.login_box, .registration_box{
+    position: absolute;
+    max-width: 70%;
+    min-height: 80%;
+    justify-content: space-between;
+    align-items: center;    
+    text-align: center;
+    margin:  0 auto;
+    background-color: rgb(118, 145, 118);
+    font-size: 20px;
+    border-radius: 20px;
+    border: 0.2px solid rgb(113, 52, 99);
+    box-shadow: 0 0 10px rgba(118, 145, 118, 0.5); 
+    overflow: hidden;
+    transition: transform .5s, height .2s ease, border-color 0.5s ease, opacity 0.2s ease-out;
+}
+.login_box{
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    top: 15%;
+    left: 15%;
+    transform: translateX(100%);
+    opacity: 0;
+}
+.registration_box{
+    margin:5px auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    top: 15%;
+    right: 15%;
+    transform: translateX(-100%);
+    opacity: 0;
+} 
+.login_box.active-popup{
+    display: grid;
+    transform: translateX(0);
+    opacity:1;
+}
+.registration_box.active-popup {
+    display: grid;
+    transform: translateX(0);
+    opacity: 1;
+}
+.login_box:hover, .registration_box:hover{
+    border-color: rgb(204, 156, 193);
+    animation: border-glow 1s infinite alternate;
+    scale: (0.2s);
+}
+
+@keyframes border-glow{
+    from {
+        border-color: rgb(113, 52, 99);
+        box-shadow: 0 0 10px  rgba(118, 145, 118, 0.5);
+    }
+    to{
+        border-color:  rgb(204, 156, 193);
+        box-shadow: 0 0 10px rgb(191, 201, 191);
+    }
+}
+.login_box.active-popup, .registration_box.active-popup{
+    transform: scale(1);
+}
+.login-container, .form_box{
+    width: 70%;
+    min-height: 80%;
+    margin: 10px auto;
+    padding: 10px auto;
+    border-radius: 20px;
+    border: 1px solid rgb(93, 49, 83);
+}
+.form_box{
+    height: 90%;
+}
+.top{
+    position: relative;
+    margin: 30px auto;
+}
+.top span{
+    color:#cedfc3;
+}
+.top a{
+    margin-left: 5px;
+    color:rgb(113, 52, 99);
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out,text-decoration 0.5s ease-in-out;
+}
+.top a:hover{
+    text-decoration: underline;
+    transform: scale(1.4);
+}
+.top h1{
+    font-size: 2.3rem;
+    margin: 10px;
+    color:rgb(113, 52, 99)
+}
+.login-form{
+    position:relative;
+    width: 100%;
+    margin: 30px auto;
+}
+.checkbox_field a{
+    padding-left: 6px;
+    text-decoration: none;
+    color:rgb(191, 201, 191);
+    font-size: 15px;
+}
+#checkbox_acord input{
+    width: 25px;
+    height: 25px;
+}
+.input-field{
+    background-color:rgba(191, 201, 191, 0.5);
+    width: 70%;
+    display: flex;
+    position: relative;
+    justify-content: start;
+    align-content: center;
+    margin: 5px auto;
+    height: 35px;
+    border-radius: 20px;
+}
+.input-field i{
+    position: absolute;
+    left:10px;
+    top:50%;
+    transform: translateY(-50%);
+}
+.input-field input{
+    background-color:transparent;
+    border: none;
+    margin-left: 40px;
+    width: 100%;
+}
+.input-field input[type="password"] {
+    background-color: transparent;
+}
+.input-field input:focus{
+    outline: none;
+    color:rgb(113, 52, 99);
+}
+.accept-field, .checkbox_field{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox_remember, .checkbox_remember2{
+    display:inline-flex;
+    align-items: center;
+}
+.checkbox_acord{
+    display:inline-flex;
+    align-items: baseline;
+    
+}
+.checkbox_acord label, .checkbox_field label, .accept-field label{
+    display: flex;
+    position: relative;
+    padding: 4px;
+    justify-content: center;
+    text-align: center;
+    color: rgb(93, 49, 83);
+    font-size: 20px;
+    padding-left: 5px;
+}
+.checkbox_acord label{
+    font-size: 13px;
+}
+input[type=checkbox]{
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(191, 201, 191);
+    border-radius: 7px 7px;
+    vertical-align:text-top;
+    position: relative;
+    transition: 0.2s all ease-in-out;
+}
+input[type=checkbox]:checked{
+    background-color: rgb(113, 52, 99);
+}
+input[type=checkbox]::before{
+    color: rgb(191, 201, 191);
+    position: absolute;
+    content: '';
+    transform: scale(0);
+    transition: 0.1s all ease-in-out;
+}
+input[type=checkbox]:checked::before{
+    transform: scale(1);
+}
+.btn-field{
+    border: none;
+    background-color: rgb(220, 202, 202);
+    font-size: 30px;
+    border-radius: 15px;
+    width: 70%;
+    padding: 4px;
+    margin:2px;
+    background-color:rgba(113, 52, 99, 0.8);
+    color: rgb(191, 201, 191);
+    box-shadow: 7px 0 10px rgba(113, 52, 99, 0.7);
+    transition:transform 0.4s all ease;
+}
+.btn-field:hover{
+    transform: scale(1.1);
+    background-color: rgb(113, 52, 99);
+}
+.login-container{
+    width: 80%;
+    margin-right: 0px;
+    background-color:rgba(177, 193, 177, 0.1);
+}
+.name-img p, .name-img a{
+    font-size: 2rem;
+    color: rgba(191, 201, 191, 0.8);
+    padding: 20px;
+    text-decoration: none;
+}
+.img-login .img{
+    width: 120%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.first .img-login{
+    margin-right: 10px;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-content: start;
+}
+#username_error, #email_error{
+    font-size: 15px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+@media only screen and (max-width:600px){
+    .login-registration{
+        width: 100%;
+         margin: 0 auto;
+    }
+    .registration_box, .login_box{
+        overflow:visible;
+        grid-template-columns: 1fr;
+        width: 90%;
+        border-radius: 20px;
+        border:2px solid rgb(113, 52, 99); 
+   }
+    .login-container, .form_box{
+        width: 90%;
+        margin: 0 auto;
+        padding: 0;
+   }
+    .top{
+        margin:10px auto;
+   }
+    .top span{
+        font-size: 10px;
+   }
+    .top h1{
+        font-size: 1.2rem;
+    }
+    .login-form{
+        margin:10px auto;
+    }
+    .input-field{
+        width: 90%;
+   }
+    .btn-field{
+        font-size: 15px;
+         width: 90%;
+    }
+    .registration_box, .login_box{
+        grid-template-rows: auto;
+    }
+    .img-login{
+        display: grid;
+        grid-template-columns: repeat(2, 0.5fr);
+    }
+    .img-login img{
+        width: 150px;
+        height: 150px;
+    }
+    .name-img a{
+        text-align: center;
+        padding: 0;
+        font-size: 15px;
+    }
+    .checkbox_acord label{
+        font-size: 7px;
+    }
+}
+@media only screen and (min-width:601px) and (max-width:768px){
+    .login-registration{
+        overflow:visible;
+        padding: 0%;
+    }
+    .registration_box, .login_box{
+        overflow:visible;
+        width: 100%;
+        min-height: 70%;
+    
+    }
+    .login-container, .form_box{
+        width: 100%;
+        min-height: 60%;
+    }
+    .top{
+        margin: 2px ;
+        padding: 10px;
+    }
+}
+@media only screen and (min-width:760px)and (max-width: 1024px) {
+    .login-registration {
+        padding: 60px 20px 30px 20px;
+    }
+    .login_box, .registration_box {
+        width: 70%; 
+    }
+}

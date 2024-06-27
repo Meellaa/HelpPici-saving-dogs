@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "dogs imeges",
+			"path": "../dogs imeges"
+		},
+		{
+			"name": "Libraria de poze",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Libraria de poze"
+	}
+}

@@ -1,0 +1,37 @@
+*{
+    box-sizing: border-box;
+    font-family:Arial, monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: #cedfc3;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color:rgb(118, 145, 118);
+    overflow-x: hidden;
+}
+.constructie{
+    margin-top: 50px;
+    height: 400px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+ 
+}
+.constructie h1{
+    font-size: 150px;
+    color:  rgb(113, 52, 99);
+    text-decoration: underline;
+}
+.constructie h2{
+    font-size: 50px;
+}
+.semn{
+    margin-top: 100px;
+    display: flex;
+    opacity: 0.2;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/47d7171d51.js" crossorigin="anonymous"></script>
+    <script src="/PaginaDeStart/nav.js" defer></script>   
+    <script src="/PaginaDeStart/loginout/login.js" defer></script>
+    <script src="/footer/footer.js" defer></script>
+    <link rel="stylesheet" href="login.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar-principal"></nav>
+    <div class="login-registration">
+    <div class="login_box active-popup">
+        <div class="login-container">
+            <div class="top">
+                <span>Nu ai cont ?<a href="#" class="registrationform" >Creează Cont</a></span>
+                <h1 id="title">Intră în cont </h1>
+            </div>
+           <form id = "login-form" class="login-form">
+                <div class="input-field">
+                    <label for = "email"></label>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" id="email" placeholder="Adresa de email">
+                </div>
+                <div class="input-field">
+                    <label for = "password"></label>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Parola">
+                </div>
+                <div class="checkbox_field">
+                    <p><a href="#">Ti-ai uitat parola?</a></p>
+                    <div class="checkbox_remember">
+                        <input type = "checkbox" id="checkbox_remember">
+                        <label for="checkbox_remember">Retine datele</label>
+                    </div>
+                </div>
+             
+                    <button type="submit" id="singInBtn" class="btn-field" class="disable">Intră în cont</button> 
+            </form>
+    </div>
+   
+         <div class="img-login">
+        <div class="name-img">
+            <p><a href="/Shop/shop.html">Cumpără de la noi și ajută o asociație în același timp!</a></p>
+        </div>
+           <img src="/PaginaDeStart/loginout/undraw_dog_c7i6 2.svg" class= "img">
+</div>
+    </div>
+        <div class="registration_box">
+             <div class="img-login first">
+                        <div class="name-img">
+                            <p><a href="/Shop/shop.html"> Magazin de animale si nu numai !!</a></p>
+                        </div>
+                        <img src="/PaginaDeStart/loginout/undraw_passing_by_0un9.svg" class= "img">
+                    </div>
+                <div class="form_box">
+                    <div class="top">
+                        <span>Ai deja un cont ?<a href="#" class="login">Intră în cont</a></span>
+                        <h1 id="title">Creează Cont</h1>
+                    </div>
+           <form id = "registration-form" class="registration-form">
+            <div class="input-group">
+                <div class="input-field" id="nameField">
+                    <label for ="username"></label>
+                    <i class="fa-solid fa-user"></i>
+                <input type="text" id="registration_username" placeholder="Nume si Prenume" >
+            </div>
+            <span style="color:rgb(191, 55, 55)" id = "username_error"></span>
+                <div class="input-field">
+                    <label for = "dogname"></label>
+                    <i class="fa-solid fa-dog" >'</i>
+                <input type="text" id="dogname" placeholder="Numele Companionului">
+                </div>
+                <div class="input-field">
+                    <label for = "email"></label>
+                    <i class="fa-solid fa-envelope"></i>
+                <input type="text" id="registration_email" placeholder="Adresa de email">
+            </div>
+                <span style="color:rgb(191, 55, 55)" id = "email_error"></span>
+                <div class="input-field">
+                    <label for = "password"></label>
+                    <i class="fa-solid fa-lock"></i>
+                <input type="password" id="registration_password" placeholder="Parola">
+            </div>
+                <span style="color:rgb(191, 55, 55)" id = "password_error"></span>   
+                <div class="accept-field">
+                    <div class="checkbox_remember">
+                        <input type = "checkbox" id="checkbox_remember2" >
+                        <label for = "checkbox_remember2">Retine datele</label>
+                    </div>
+                     <div class="checkbox_acord">     
+                        <input type = "checkbox" id="checkbox_acord">
+                        <label for = "checkbox_acord">Sunt de acord cu prelucrarea datelor personale conform Politicii de Confidentialitate a magazinului</label>
+                    </div>
+                </div>
+            </div>
+                <button type="submit" class="btn-field" id="submit" >Creează Cont</button>
+    </form>
+    </div>
+</div>
+</div>
+<div id= "footer-placeholder"></div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Stilizare secțiuni */
+  #navcont, #hero {
+    background-color: #f8f8f8;
+    padding: 20px;
+  }
+  
+  /* Stilizare elemente de navigare */
+  .navcontin a {
+    color: #1c703f;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .navcontin a:hover {
+    color: #2ecc71;
+  }
+  
+  .login li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  .login li a {
+    color: #1c703f;
+    text-decoration: none;
+  }
+  
+  .login li a:hover {
+    color: #2ecc71;
+  }
+  
+  /* Stilizare formular */
+  .mancare {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mancare h2 {
+    color: #1c703f;
+  }
+  
+  .rasa, .alege {
+    margin-bottom: 20px;
+  }
+  
+  .rasa input, .alege select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Stilizare secțiune de promovare */
+  .phstart {
+    background-color: #2ecc71;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .phstart h2 {
+    margin-bottom: 10px;
+  }
+  
+  .phstart p {
+    margin-bottom: 0;
+  }
+
+ 
