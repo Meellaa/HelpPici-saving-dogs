@@ -1,0 +1,199 @@
+
+<script>
+    const navBar = document.querySelector('.primary-navigation');
+    const menu = document.querySelector('.menu-toggle');
+let visibility = false;
+
+menu.addEventListener('click', () => {
+    if (visibility === false) {
+        navBar.setAttribute("data-visible", "true");
+        navBar.setAttribute("aria-expanded", "true");
+        visibility = true; 
+    } else {
+        navBar.setAttribute("data-visible", "false");
+        navBar.setAttribute("aria-expanded", "false");
+        visibility = false;
+    }
+});
+</script> 
+ <style>
+.header{
+    background:linear-gradient(to left top, rgb(21, 109, 63),rgb(28, 77, 50));
+    position: fixed;
+    display:flex;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 70%;
+
+    justify-content: space-between;
+    text-align: center;
+    align-items:center;
+    z-index:100;
+}
+.nav{
+    margin-right: 0;
+}
+.nav h2{
+    color: #92ae81;
+    font-size: 2rem;
+    text-decoration:solid;
+}
+.nav span {
+    color: #92ae81;
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-inline-end: 0.2em ;
+}
+.primary-navigation  a{
+    color: #c9d5c2;
+    opacity: 90%;
+    width: 20%;
+    margin-right:1rem;
+    text-decoration: none;
+    font-weight: 500;
+    list-style: none;
+}
+.header ul{
+    list-style: none;
+}
+.nav .logo{
+    font-size: 3.5rem;
+    font-weight:700;
+    color: #c9d5c2;
+    width: auto;
+    justify-content: center;
+}
+.menu-toggle{
+    display:none;
+}
+/*Breack points at : 1-558 2-1271 3-*/ 
+
+@media(max-width:35em){
+    .primary-navigation{
+        --gap: 3em;
+        position: fixed;
+        inset: 0 0 0 35%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        align-items: center;
+        justify-content: center;
+        background: hwb(112 25% 57% / 0.838);
+
+        transform: translateX(100%);
+        transition: 350ms ease-out;
+    }
+    .primary-navigation[data-visible="true"] {
+        transform:translateX(0%);
+    }
+    .header{
+        background: none;
+    }
+    .navbar-principal .header .logo {
+        color:  rgb(21, 109, 63) ;
+        opacity: 100%;
+    }
+   .header h2{
+        display: none;
+    }
+   .menu-toggle{
+        display: block;
+        position:absolute;
+        z-index: 9999;
+        border: 0;
+        background-color: transparent;
+        background-image: url(/PaginaDeStart/burger-menu-2.svg);
+        background-size: contain;
+        width: 3rem;
+        aspect-ratio: 1;
+        border: 0;
+        right:2rem;
+        top:0.5rem;
+    }
+    .menu-toggle [aria-expanded="true"]{
+        background-image: url(/PaginaDeStart/images-1.jpg);
+    }
+}
+@media(max-width:700px){
+    .nav h2, span {
+        display:none;
+    }
+    .header{
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media(max-width:900px){
+    .header{
+        padding-right: 0;
+        width:100%;
+        height:auto;
+        align-items: center;
+    }
+    .navbar a{   
+        justify-content:flex-end;
+        align-items:flex-end;
+        margin: 0;
+        bottom: 0;
+        width: auto;
+        font-size: 0.5rem;
+    }
+    .nav .logo{
+       font-size: 1.8em;
+    }
+    .nav h2, span {
+        margin: o;
+        justify-content:flex-start ;
+        align-items:start;
+    }
+}
+@media (max-width:1200px){
+    .header{
+        width:100%;
+        height:auto;
+        align-items: center;
+    }
+    .navbar a{   
+        justify-content:flex-end;
+        align-items: end;
+        margin-right: 2rem;
+        width:auto;
+        font-size: 1rem;
+    }
+    .nav .logo{
+        font-size: 2.2rem;
+    }
+    .nav h2 {
+        align-items: start;
+        font-size: 2rem;
+    }
+    .nav span{
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 5px ;
+        font-size: 1.8rem;
+    }
+}
+.flex{
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav flex">
+            <h2> <span>#</span>buid another life for <span> PETS</span></h2>
+            <a href ="/PaginaDeStart/helpPicii.html" class="logo">HelpPicii</a>
+        </div>
+    <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"  data-visible ="false"><span class ="sr-only">Menu</span></button>   
+       <nav>
+        <ul id="primary-navigation" data-visible ="false" class="primary-navigation flex">     
+            <li><a href ="/LibrarieAsociatii/librarieFoto.html">Asociații</a></li>         
+            <li><a href="/Shop/shop.html">Shop</a></li> 
+            <li> <a href="/Tips/tips.html">Tips</a></li></ul> 
+        </nav>
+        </header>
+    </div>

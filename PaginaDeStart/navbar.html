@@ -1,0 +1,257 @@
+
+<script>
+    const navBar = document.querySelector('.primary-navigation');
+    const menu = document.querySelector('.menu-toggle');
+    let visibility = false;
+
+menu.addEventListener('click', () => {
+    if (visibility === false) {
+        navBar.setAttribute("data-visible", "true");
+        navBar.setAttribute("aria-expanded", "true");
+        visibility = true; 
+    } else {
+        navBar.setAttribute("data-visible", "false");
+        navBar.setAttribute("aria-expanded", "false");
+        visibility = false;
+    }
+});
+</script> 
+ <style>
+.header{
+    background:linear-gradient(to right top,  rgb(118, 145, 118), rgb(113, 52, 99));
+    position: fixed;
+    display:flex;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 80%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    text-align: center;
+    align-items:center;
+    z-index:100;
+}
+.nav h2{
+    color: #92ae81;
+    font-size: 1rem;
+    text-decoration:solid;
+}
+.nav span {
+    color: #92ae81;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.icon {
+    display: flex;
+    align-items: center; 
+    margin-right: 10px; 
+}
+.primary-navigation{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+.primary-navigation li{
+    position: relative;
+}
+.primary-navigation i{
+  position:relative;
+}
+.primary-navigation a{
+    color: #c9d5c2;
+    opacity: 90%;
+    max-width: 20%;
+    margin-right:2px;
+    text-decoration: none;
+    font-weight: 500;
+    list-style: none;
+    transition:0.3s ease;
+    margin-right: 10px;
+}
+.primary-navigation i{
+opacity: 1;
+font-size: 30px;
+text-shadow: 0  0 10px #468d6b;
+}
+.primary-navigation li a.line:hover,
+.primary-navigation li a.line.active{
+    color: #e9efe6;
+    opacity: 100%;
+}
+.primary-navigation li a.line.active::after,
+.primary-navigation li a.line:hover::after {
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #92ae81;
+    position: absolute;
+    bottom: -4px;
+    left:20px;
+}
+.header ul{
+    list-style: none;
+}
+.nav .logo{
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight:700;
+    color: #c9d5c2;
+    width: auto;
+    justify-content: center;
+}
+.menu-toggle{
+    display:none;
+}
+.primary-navigation .fa-user {
+    text-align: center;
+    justify-content: center;
+}
+.primary-navigation .fa-user:hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+    text-decoration: none !important;
+}
+.primary-navigation .fa-user:hover::after {
+    content:none;
+}
+/*Brea/Shop/shop.htmlck points at : 1-558 2-1271 3-*/ 
+
+@media only screen and (max-width:600px){
+     .header{
+        align-items: center;
+        justify-content: space-between;
+    }
+    .primary-navigation{
+        --gap: 3em;
+        position: fixed;
+        inset: 0 0 0 50%;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        align-items: center;
+        justify-content: center;
+        background:linear-gradient(to right top,  rgb(118, 145, 118), rgb(113, 52, 99));
+        transform: translateX(100%);
+        transition: 350ms ease-out;
+        overflow-x: hidden; 
+        z-index: 1000;
+        text-align: center;
+    
+    }
+    .primary-navigation[data-visible="true"] {
+        transform:translateX(0%);
+        display: flex;
+    }
+    .primary-navigation a{
+        margin: 10px 0;
+    }
+    .navbar-principal .header .logo {
+        color:  #c9d5c2;
+        opacity: 100%;
+
+    }
+    .nav .logo{
+        font-size: 2rem;
+    }
+   .header h2{
+        display: none;
+    }
+   .menu-toggle{
+        display: block;
+        position:absolute;
+        z-index: 999999;
+        border: 0;
+        color: #c9d5c2;
+        background-color: transparent;
+        background-image: url(/PaginaDeStart/burger-menu-2.svg);
+        background-size: contain;
+        width: 3rem;
+        aspect-ratio: 1;
+        border: 0;
+        right:1px;
+        top:-1;
+    }
+    .menu-toggle [aria-expanded="true"]{
+        background-image: url(/PaginaDeStart/images-1.jpg);
+    }
+}
+@media only screen and (min-width:601px) and (max-width:900px){
+
+    .navbar a{   
+        justify-content:flex-end;
+        align-items:flex-end;
+        margin: 0;
+        bottom: 0;
+        width: auto;
+        font-size: 0.5rem;
+    }
+    .nav h2, .nav span {
+        justify-content:flex-start ;
+        align-items:start;
+        font-size: 20px;
+    }
+    .nav li{
+        font-size: 12px;
+    }
+    .nav .logo{
+        font-size: 30px;
+    }
+    .primary-navigation a{
+        margin: auto 0 ;
+        font-size: 15px;
+    }
+}
+@media only screen and(min-width:901px)and (max-width:1200px){
+    .header{
+        width:100%;
+        height:auto;
+        align-items: center;
+    }
+    .navbar a{   
+        justify-content:flex-end;
+        align-items: end;
+        margin-right: 2rem;
+        width:auto;
+        font-size: 1rem;
+    }
+    .nav .logo{
+        font-size: 12px;
+    }
+    .nav h2 {
+        align-items: start;
+        font-size: 1rem;
+    }
+    .nav span{
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: 5px ;
+        font-size: 0.8rem;
+    }
+}
+.flex{
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav flex">
+            <h2> <span>#</span>build another life for <span> DOGS</span></h2>
+            <a href ="/PaginaDeStart/helpPicii.html" class="logo">HelpPicii</a>
+        </div>
+    <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"  data-visible ="false"><span class ="sr-only">Menu</span></button>   
+<nav>
+    <ul id="primary-navigation" data-visible ="false" class="primary-navigation flex">     
+        <li><a href="/PaginaDeStart/loginout/login.html" class="icon"><i class="fa-solid fa-user"></i></a></li>
+        <li><a class="active line" href ="/LibrarieAsociatii/librarieFoto.html">Asociații</a></li>         
+        <li><a class="line" href="/Shop/shop.html">Shop</a></li> 
+        <li><a class="line" href="/Tips/tips.html">Tips</a></li></ul> 
+    </nav>
+</header>
+    </div>

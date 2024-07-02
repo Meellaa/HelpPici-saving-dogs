@@ -1,0 +1,721 @@
+*{
+    box-sizing: border-box;
+    font-family:Arial, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: #cedfc3;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(118, 145, 118);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+.all{
+    margin:20px;
+    display: grid;
+    gap:10px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+.top{
+    display: flex;
+    position: relative;
+    height: 470px;
+    background-image: url(/LibrarieAsociatii/pozelibrarie/apadost.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    clip-path: polygon(100% 0%, 100% 100%, 80.6% 96%, 63.3% 96%, 46.6% 96.8%, 32.2% 95.3%, 19.3% 95.8%, 0% 100%, 0% 0%);
+}
+.fullwidth{
+    width: 100%;
+    display: grid;
+    grid-column: 1/-1;
+}
+.move-down {
+    margin-top: 20px; /* Aceasta face ca secțiunea să se deplaseze mai jos cu un spațiu de 20px */
+}
+.imgs, .reque, .top-coduri{
+    padding-top:40px ;
+    background-color: rgba(177, 147, 118,0.6);
+    position: relative;
+    display: flex;
+}
+.reque, .top-coduri{
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 2%;
+}
+.reque li{
+    padding: 5px 5px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(191, 165, 140);
+    background-color: rgb(113, 52, 99);
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 7px;
+    box-shadow: 10px 10px 12px #cedfc3;
+    animation: 5s slide infinite linear;
+}
+.reque span{
+    letter-spacing: 10px;
+    font-size: 30px;
+}
+.top-coduri{
+    justify-content: center;
+    text-align: end;
+}
+.gallery{
+    display: none;
+}
+@keyframes slide{
+    from{
+        transform: translateX(-30%);
+    }
+    to{
+        transform: translateX(0)
+    }}
+@keyframes round{
+    from{
+        transform: translateY(200px);
+    }
+    20%{
+        transform: translateX(-200px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+.top-coduri h2{
+    width: 50%;
+    font-size: 25px;
+    letter-spacing: 5px;
+    background-color: rgb(113, 52, 99);
+    border-radius: 7px;
+    box-shadow:10px 10px 10px 12px #cedfc3;
+    animation: 5s round 2 linear;
+    color: #cedfc3;
+}
+.imgs h1{
+    padding-left: 20%;
+    font-size: 54px;
+    color: rgb(113, 52, 99);
+    text-shadow:12px 12px 15px #cedfc3;
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+    word-spacing: 10px;
+    margin: 7% auto;
+}
+.sect-asociatie h2{
+    font-size: 34px;
+    text-align: center;
+    color: rgb(113, 52, 99);
+}
+.sect-asociatie{
+    padding: 20px;
+     background-color:rgb(191, 165, 140);
+    text-align: center;
+    border-radius: 5px;
+}
+.donad p{
+    margin: 10px;
+}
+.donad i{
+    margin: 5px;
+    opacity: 1;
+    color: #713463;
+}
+.detalii{
+    display: flex;
+    align-items:center;
+    margin-top: 10px;
+}
+.detalii a{
+    text-decoration: none;
+}
+.gallery .but{
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    border-radius: 1px;
+    line-height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top:45%;
+    margin:20px;
+    transform: translateY(-50%);
+}
+.gallery .btn-left{
+    transform:rotate(180deg);
+    left:-25px;
+}
+.gallery .btn-right{
+    right:-25px;
+}
+.container button{ 
+    display: flex;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    color:#b5c9a9 ;
+    background-color:rgb(113, 52, 99);
+    height: 50px;
+    width: 100%;
+    border: none;
+    border-radius: 7px;
+    transition: 0.5s ease-in;
+}
+.expands{
+    display: flex;
+    width: 80%;
+    position: relative;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.expands button{
+    width: 20%;
+}
+.container button:hover{
+    background-color:#b5c9a9 ;
+    color:rgb(113, 52, 99);
+}
+.btnwidth{
+    width: 20px;
+}
+.container img{
+    width: 155px;
+    height: 155px;
+    border-radius: 7px;
+    margin: 10px;
+}
+.fordogs{
+    font-size: 20px;
+    border-radius: 5px;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    background-size: 100% auto;
+}
+.container h2{
+    color:rgb(113, 52, 99);
+}
+.container h2::after{
+    color:rgb(113, 52, 99);
+    transform: scale(1.5);
+    transition: 15s;
+}
+.sect-asociatie{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.gallery{
+    display: block;
+    border-radius: 7px;
+    padding:27px;
+    position: relative;
+    background-color:#b5c9a9;
+}
+.gallery .carosel{
+    display: grid;
+    grid-auto-flow: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    gap:15px;
+    scroll-behavior: smooth;  
+}
+.carosel :where(.card, .img){
+    scroll-snap-type: x proximity;
+} 
+.carosel .card{
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    scroll-snap-align:center;
+    transition: all 1.1s;
+}
+.card img{
+    margin:auto 20px;
+    border-radius: 7px;
+    position: relative;
+    box-shadow: -2px 6px 6px -1px rgb(113, 52, 99);
+}
+.card img {
+    margin: auto;
+    position: relative;
+    align-content: center;
+    width: 230px;
+    height:300px;
+    object-fit:cover;
+    border-radius: 20px;
+    display: block;
+}
+.card h2{
+    padding: 15px;
+    align-items: center;
+    font-size: 1.1rem;
+    color:rgb(113, 52, 99);
+    text-transform: capitalize;
+}
+.carosel .card:hover {
+    transform: scale(1.1);
+}
+.card:hover img{
+    filter: blur(1px);
+    opacity: 0.9;
+}
+.card .despre{
+    position:absolute;
+    opacity: 0%;
+    width: 90%;
+    bottom: 30%;
+    left: 5%;
+    transition: 0.3 ;
+}
+.despre p{
+    color:#cedfc3;
+    text-shadow: 2px 2px 2px #713463; 
+    font-size: 25px;
+}
+.card:hover .despre{
+    opacity: 1;
+    text-align: center;
+}
+.about{
+    display: none;
+}
+.about-on{
+    display: block;
+    color:rgb(113, 52, 99);
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    font-size: 14px;
+}
+.adoption{
+    padding: 20px;
+    display: flexbox;
+    position: relative;
+    width: 80%;
+    margin:0 auto;
+    text-align: center;
+}
+.adoption h2{
+    padding: 20px;
+    font-size: 30px;
+}
+.linecercle{
+    background-color: rgb(191, 165, 140);
+    width: 90%;
+    height: 3px;
+    position: relative;
+    margin: 0 auto;
+}
+#cum{
+    width: 110%;
+    padding: 20px 0;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;    
+    text-align: center;
+    list-style-type: none;
+}
+#cum p{
+    padding-top: 10px;
+    width: 50%;
+    font-size: 14px;
+    margin: 0 auto;
+    color: rgb(191, 165, 140);
+}
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    position: absolute;
+    background-color: rgb(177, 147, 118);
+    top:-150%;
+    filter: blur(1px);  
+}
+.circle:nth-child(1){
+    left: -3px;
+}
+.circle:nth-child(2){
+    left: 50%;
+    transform: translate(-50%);
+}
+.circle:nth-child(3){
+    right: -3px;
+}
+.expand {
+    grid-column: 1 / -1;
+    grid-row:1;
+}
+.gallery{
+    display: none;
+}
+.img-fly-up {
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(-100%);
+}
+                /*coduri*/
+.cod{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    min-height: 300px;
+    background-color: rgb(177, 147, 118);
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.explain-cod span{
+    color: rgb(113, 52, 99);
+    text-transform: uppercase;
+    font-size: 40px;
+    animation: 6s spark ease-in-out infinite;
+}
+@keyframes spark{
+    from, to{
+        text-shadow:4px 2px 2px #cedfc3;
+    }
+    20%, 80% {
+        text-shadow:2px 2px 2px#cedfc3;     
+    }
+    40% {
+        text-shadow:4px 2px 2px rgb(118, 145, 118)
+    }
+    60%{
+        text-shadow:4px 2px 2px #713463;
+    }
+}
+.text-cod{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+.text-cod img{
+    display: block;
+    width: 500px;
+    height: 300px;
+    border-radius: 50px;
+}
+a{
+    text-decoration: none;
+}
+.text-cod p{
+    color: #713463;
+    border:rgb(113, 52, 99);
+    background-color: #fff;
+    font-size: 25px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.4s linear;
+    border-radius: 55px;
+}
+.text-cod p:hover{
+    transform:scale(1.3); 
+}
+.text-cod::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 40%, rgba(177, 147, 118, 1) 100%);
+    pointer-events: none;
+}
+.explain-cod{
+    width: 30%;
+    text-shadow: 2px 2px 2px rgb(118, 145, 118);
+}
+.explain-cod p{
+    font-size: 40px;
+    text-align: start;
+    letter-spacing: 8px;
+    padding: 10px;
+    animation:6s in ease-in-out infinite;
+}
+@keyframes in {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    20%, 80% {
+        transform: translateY(10%);
+    }
+    40%, 60% {
+        transform: translateY(-10%);
+    }
+}
+.buttons-cod {
+    display: grid;
+    gap:10px;
+    width: 30%;
+}
+.buttons-box{
+    justify-content: flex-end;
+    text-align: end;
+    margin: 5px;
+}
+.buttons-box button{
+    width: 70%;
+    background-color: rgb(118, 145, 118);
+    border-radius: 7px;
+    border: 0.5px solid #cedfc3;
+    padding: 5px 5px;
+    box-shadow: 0.5px 0.5px 5px rgb(113, 52, 99)
+}
+.hide-box{ 
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    height: 0;
+    font-size: 15px;
+    text-align: end;
+}
+.text-cod{
+    display: grid;
+}
+.buttons-box:hover .hide-box {
+   opacity: 1;
+   visibility: visible;
+   height: auto;
+   justify-content: end;
+   text-align:end;
+}
+.search{
+    text-align: center;
+    margin:10px auto;
+}
+.searchapet h2{
+    color:rgb(113, 52, 99);
+    font-size: 25px;
+    text-align: start;
+    width: 80%;
+    margin: 10px auto;
+}
+.search form{
+    color:rgb(113, 52, 99);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    gap:20px;
+}
+.search form label{
+    font-size: 15px;
+}
+.adapostcatel, .locatie{
+    display:grid;
+    justify-content: center;
+    border: #b5c9a9 solid 2px;
+    border-radius: 7px;
+    max-width: 40%;
+    overflow: hidden;
+}
+#search-name, #location{
+    width: 400px;
+    border:2px;
+    border-radius: 7px;
+    text-align: center;
+    margin:10px;
+    color:rgb(113, 52, 99);
+    background: transparent;
+    text-decoration: none;
+}
+.search span{
+    margin-top: 20px;
+}
+.search button{
+    width: 100px;
+    border-radius: 7%;
+    border: 2px solid #b5c9a9;
+    background-color: rgb(113, 52, 99);
+    cursor: pointer;
+}
+.searchapet input[type="text"]::placeholder {
+    opacity: 1;
+    color: rgb(113, 52, 99);
+   
+}
+input:focus{
+    outline: none;
+    box-shadow: 0 0 5px rgb(113, 52, 99);
+}
+.locatie option{
+    background-color: #b5c9a9;
+}
+.locatie select:focus , .locatie input{
+    outline: none; /* Elimină conturul implicit */
+    border-color: #4CAF50; 
+    cursor: pointer;
+}
+
+.pentruasociatie{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap:10px;
+}
+.pentruasociatie i{
+   color:rgb(113, 52, 99);
+    padding: 7px 7px;
+    border-radius: 7px;
+    font-size: 20px;
+}
+.cumpara, .doneaza{
+    transition: transform 1s ease;
+}
+.cumpara:hover, .doneaza:hover{
+    transform: scale(1.5);
+}
+.cumpara-hover, .doneaza-hover{
+    font-size: 10px;
+    width: 70%;
+    margin: 0 auto;
+}
+@media  screen and (min-width:761px) and (max-width:976px) {
+ 
+    .imgs h1{
+        font-size: 50px;
+    }
+    .top-coduri h2{
+        font-size: 20px;
+        padding: 2px 2px;
+        margin: 20px;
+    }
+    /* .cod/*/
+ .explain-cod{
+    width:20%;
+ }
+    .explain-cod p{
+        font-size: 22px;
+        text-align: center;
+        letter-spacing: none;
+    }
+    .explain-cod span{
+        font-size: 28px;
+    }
+    .text-cod img{
+        width: 250px;
+        height: 200px;
+    }
+    .buttons-cod{
+        width: 25%;
+    }
+    /*.searchapet */
+    .searchapet h2{
+        font-size: 20px;
+    }
+    .search form{
+        gap:1px;
+    }
+
+    #search-name, #location{
+        max-width: 300px;
+    }
+    .adapostcatel input, .locatie input{
+        font-size: 15px;
+    }
+}
+@media  screen and (max-width:760px) {
+    .top{
+        background-size: 200%;
+    }
+    .imgs h1{
+        width: 80%;
+        font-size: 30px;
+        text-align: center;
+        margin-top: 40%;
+  }
+  .reque li{
+    animation: none;
+  }
+  .adoption li{
+    font-size: 17px;
+  }
+  #cum p{
+    width: 90%;
+  }
+  .top-coduri{
+    display: none;
+  }
+    /*cod*/
+   .explain-cod {
+        width: 100%;
+   }
+    .explain-cod p{
+        font-size: 20px;
+        text-align: center;
+    }
+    .explain-cod span{
+        font-size: 30px;
+    }
+    .cod{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+    .text-cod img{
+        width: 150px;
+        height: 150px;
+    }
+    .buttons-cod{
+        grid-column: 1 / span 2;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .buttons-box{
+        width: 100%;
+        text-align: center;
+    }
+    .buttons-box button{
+        width: 100%;
+        font-size: 12px;
+    }
+    .buttons-box:hover .hide-box{
+        text-align: center;
+    }
+    .searchapet form{
+        flex-direction: column;
+        gap:2px;
+        text-align: center;
+    }
+    /* search-name*/
+      #search-name, #location{
+        max-width: 100%;
+    }
+    .adapostcatel, .locatie{
+        max-width: 90%;
+        margin: 5px auto;
+    }
+    .searchapet form button{
+        margin: 10px auto;
+    }
+                 /* expand galerie */
+    .container{
+        flex-direction: column;
+    }
+    .detalii img{
+        width: 100px;
+        height: 100px;
+    }
+    .expands btn{
+        width: 100%;
+    }
+}
