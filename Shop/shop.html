@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Shop/shop.css">
+    <script src ="/Shop/favproducts.js" defer></script>
     <script src="/PaginaDeStart/nav.js" defer></script>
-    <script src="/Shop/shop.js" defer></script>
     <script src="/footer/footer.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Andada+Pro&family=Anton&family=Arimo&family=Bebas+Neue&family=Dekko&family=Inconsolata:wght@300&family=Kanit:wght@300&family=Karla:ital,wght@1,200&family=Open+Sans:ital@1&family=Playfair+Display:wght@600&family=Roboto+Mono:ital,wght@1,200;1,300;1,400&family=Vina+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/little-turtle" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -74,12 +76,38 @@
                     </ul>
             </div>
         <ul class="login">
-            <li><a href="#"><i class="fa-solid fa-magnifying-glass" style="color:#cedfc3;"></i></a></li>
-            <li><a href="#"><i class="fa-regular fa-heart" style="color: #cedfc3;"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-basket-shopping"style="color: #cedfc3;"></i></a>
-            <span>0</span></li>
+            <li><i class="fa-solid fa-magnifying-glass" style="color:#cedfc3;"></i></li>
+            <div class = "favoriteCart"><li><i class="fa-regular fa-heart" style="color: #cedfc3;"></i></li></div>
+            <div class = "donationCart"><li><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"></i>
+            <span class="shelterQuantity">0</span></li>
+            </div>
+            <div class="shoppingCart"><li><i class="fa-solid fa-basket-shopping"style="color: #cedfc3;"></i>  
+            <span class="shopQuantity">0</span></li>
+            </div>
         </ul>
     </div>
+    <div class="favoriteList l">
+        <h3>Produse favorite</h3>
+        <ul class="favoriteProducts"></ul>
+        <div class="checkoutFavorite checkout">
+        <div class="close" >Inchide</div>
+    </div>
+    </div> 
+    <div class="shelterList l">
+        <h3>Cumpără pentru un adăpost </h3>
+        <ul class = "shelterProducts products"></ul>
+        <div class="checkoutShelter checkout">
+            <div class="totalShelter total">Subtotal</div>
+            <div class="closeShelter close">Inchide</div>
+        </div>   
+    </div>
+    <div class="shopList l">
+        <h3>Coșul tău ... </h3>
+        <ul class="cartProducts products"></ul>
+        <div class="checkoutCart checkout">
+            <div class="totalShop total">Subtotal</div>
+            <div class="closeCart close">Inchide</div>
+        </div>
 </section>
     <section id="hero">
         <div class="reduceri-container">
@@ -173,24 +201,24 @@
     <div class="bannere">
         <h2 class="mobile-hide">Cele mai bune produse pentru prietenul tau </h2>
         <div class="logo-slide">
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-1.jpg" ></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-2.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-3.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-4.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download.jpg"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-1.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /images.png"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-1.jpg" loading="lazy" ></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-2.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-3.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-4.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download.jpg"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-1.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /images.png"loading="lazy"></a>
         </div>
         <div class="logo-slide">
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-1.jpg" ></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-2.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-3.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-4.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download.jpg"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /download-1.png"></a>
-            <a href= '#' ><img src="/Shop/logo hrana firme /images.png"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-1.jpg" loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-2.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-3.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-4.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download.jpg"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /download-1.png"loading="lazy"></a>
+            <a href= '#' ><img src="/Shop/logo hrana firme /images.png"loading="lazy"></a>
         </div>
     </div>
     <div class="magazin" id="magazin-place">
@@ -199,926 +227,44 @@
         <ul class="lis">
             <li id='recompenseLi'><a href= '#recompense'><img src="/Shop/os.jpg"></a>Recompense</li>
             <li id='hranaLi'><a href= '#hrana'><img src='/Shop/mancare.jpg'></a>Hrana</li>
-            <li id='accesoriiLi'><a href= '#accesorii'><img src='/Shop/accesorii.jpg'></a>Accesorii</li>
             <li id='ingrijireLi'><a href= '#ingrijire'><img src='/Shop/shampoo.jpg'></a>Ingrijire</li>
             <li id='kituriLi'><a href= '#kituri'><img src="/Shop/prodrom.jpg"></a>Kituri</li>
             <li id='produseRomanestiLi'><a href= '#produseRomanesti'><img src='/Shop/producatoriromani.jpg'></a>Produse Romanesti</li>
-            <li id='dietaLi'><a href= '#dieta'><img src='/Shop/dietevet.jpg'></a>Dieta</li>
+            <li id="dietaVeterinaraLi"><a href="#dietaVeterinara"><img src='/Shop/dietevet.jpg'></a>Dieta</li>
         </ul>
         <div class="search-button">
             <button on-click="cautaProduse()" id="search-button"placeholder="Cauta produse ..." ><i class="fa-solid fa-magnifying-glass" style="color: #1c703f;"></i> </button>
             <input type="text" id="search-input" placeholder="Cauta produse ...">
         </div>
-  
         <div class="produse" id="favorite">
             <h2>Produse favorite</h2>
-            <ul class="lists">
-                <li>
-                    <div class="icons">
-                        <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                        <a href="#"><i class="fa-solid fa-basket-shopping" style="color:#cedfc3;"onclick="adaugaInCos()"></a></i>
-                    </div>
-                    <div class="jucarie box">
-                        <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg" ></a>
-                        <h3>Jucarie ros </h3>
-                        <p>15 lei</p>
-                    </div>
-                </li>
-                <li>
-            <div class="icons">
-                <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="mancareDevora box">
-                <a href= "#"><img src="/Shop/pozemagazin/download.jpg"></a>
-                  <h3>Devora</h3>
-                <p>49 lei</p>
-            </div>
-                </li>
-                <li>
-                    <div class="icons">
-                        <a href= "#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                        <a href= "#"><i class="fa-solid fa-heart" style="color:#cedfc3;"onclick="adaugaFavorite()"></a></i>
-                        <a href= "#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                    </div>
-                    <div class="jucarie box">
-                        <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-                        <h3>Jucarie mancare </h3>
-                        <p>15 lei</p>
-                </div>
-                </li>
-                <li>
-                        <div class="icons">
-                            <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-                            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                        </div>
-                        <div class="mancareDevora box">
-                            <a href="#"><img src="/Shop/pozemagazin/devora.jpeg"></a>
-                            <h3>Devora asta</h3>
-                            <p>49 lei</p>
-                        </div>
-                </li>
-                <li>
-                <div class="icons">
-                    <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;;"onclick="adaugaInAdapost()"></a></i>
-                    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-                </div>
-                <div class="jucarie box">
-                    <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-                    <h3>Jucarie ros </h3>
-                    <p>15 lei</p>
-                </div>
-                </li>
-                <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
+            <ul class="lists"></ul>
         </div>
-        <div class="jucarie box">
-            <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-            <h3>Jucarie ros </h3>
-            <p>15 lei</p>
+        <div class="produse" id="hrana">
+            <h2>Hrana</h2>
+            <ul class="lists"></ul>
         </div>
-                </li>
-                <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="jucarie box">
-        <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-        <h3>Jucarie mancare </h3>
-        <p>15 lei</p>
-</div>
-                </li>
-                <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
+        <div class="produse" id="dietaVeterinara" >
+            <h2>Dieta Veterinara</h2>
+            <ul class="lists"></ul>
         </div>
-        <div class="jucarie box">
-            <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-            <h3>Jucarie mancare </h3>
-            <p>15 lei</p>
-    </div>
-                </li>
-                <li>
-            <div class="icons">
-                <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-                <h3>Jucarie mancare </h3>
-                <p>15 lei</p>
+        <div class="produse" id="recompense">
+            <h2>Recompense</h2>
+            <ul class="lists"></ul>
         </div>
-                </li>
-            </ul>
+        <div class="produse" id="ingrijire">
+            <h2>Ingrijire</h2>
+            <ul class="lists"></ul>
         </div>
-    <div class="produse" id="hrana">
-        <h2>Hrana</h2>
-        <ul class="lists">
-            <li>
-                <div class="icons">
-                    <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color:#cedfc3;"onclick="adaugaInCos()"></a></i>
-                </div>
-                <div class="jucarie box">
-                    <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg" ></a>
-                    <h3>Jucarie ros </h3>
-                    <p>15 lei</p>
-                </div>
-            </li>
-            <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
+        <div class="produse" id="kituri">
+            <h2>Kituri de produse</h2>
+            <ul class="lists"></ul>
         </div>
-        <div class="mancareDevora box">
-            <a href= "#"><img src="/Shop/pozemagazin/download.jpg"></a>
-              <h3>Devora</h3>
-            <p>49 lei</p>
+        <div class="produse" id="produseRomanesti">
+            <h2>Produse Romanesti</h2>
+            <ul class="lists"></ul>
         </div>
-            </li>
-            <li>
-                <div class="icons">
-                    <a href= "#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                    <a href= "#"><i class="fa-solid fa-heart" style="color:#cedfc3;"onclick="adaugaFavorite()"></a></i>
-                    <a href= "#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                </div>
-                <div class="jucarie box">
-                    <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-                    <h3>Jucarie mancare </h3>
-                    <p>15 lei</p>
-            </div>
-            </li>
-            <li>
-                    <div class="icons">
-                        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                    </div>
-                    <div class="mancareDevora box">
-                        <a href="#"><img src="/Shop/pozemagazin/devora.jpeg"></a>
-                        <h3>Devora asta</h3>
-                        <p>49 lei</p>
-                    </div>
-            </li>
-            <li>
-            <div class="icons">
-                <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-                <h3>Jucarie ros </h3>
-                <p>15 lei</p>
-            </div>
-            </li>
-            <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="jucarie box">
-        <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-        <h3>Jucarie ros </h3>
-        <p>15 lei</p>
-    </div>
-            </li>
-            <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-    <h3>Jucarie mancare </h3>
-    <p>15 lei</p>
-</div>
-            </li>
-            <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="jucarie box">
-        <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-        <h3>Jucarie mancare </h3>
-        <p>15 lei</p>
-</div>
-            </li>
-            <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-        </div>
-        <div class="jucarie box">
-            <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-            <h3>Jucarie mancare </h3>
-            <p>15 lei</p>
-    </div>
-            </li>
-        </ul>
-</div>
-<div class="produse" id="dieta">
-    </h2>Dieta Veterinara</h2>
-    <ul class="lists">
-        <li>
-            <div class="icons">
-                <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href="#"><i class="fa-solid fa-basket-shopping" style="color:#cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg" ></a>
-                <h3>Jucarie ros </h3>
-                <p>15 lei</p>
-            </div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="mancareDevora box">
-        <a href= "#"><img src="/Shop/pozemagazin/download.jpg"></a>
-          <h3>Devora</h3>
-        <p>49 lei</p>
-    </div>
-        </li>
-        <li>
-            <div class="icons">
-                <a href= "#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href= "#"><i class="fa-solid fa-heart" style="color:#cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href= "#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-                <h3>Jucarie mancare </h3>
-                <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-                <div class="icons">
-                    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                </div>
-                <div class="mancareDevora box">
-                    <a href="#"><img src="/Shop/pozemagazin/devora.jpeg"></a>
-                    <h3>Devora asta</h3>
-                    <p>49 lei</p>
-                </div>
-        </li>
-        <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-        </div>
-        <div class="jucarie box">
-            <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-            <h3>Jucarie ros </h3>
-            <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-    <h3>Jucarie ros </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-<a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-<a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-<a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-<a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-<h3>Jucarie mancare </h3>
-<p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-    <h3>Jucarie mancare </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="jucarie box">
-        <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-        <h3>Jucarie mancare </h3>
-        <p>15 lei</p>
-</div>
-        </li>
-    </ul>
-</div>
-<div class="produse" id="recompense">
-    <h2>Recompense</h2>
-    <ul class="lists">
-        <li>
-            <div class="icons">
-                <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href="#"><i class="fa-solid fa-basket-shopping" style="color:#cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg" ></a>
-                <h3>Jucarie ros </h3>
-                <p>15 lei</p>
-            </div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="mancareDevora box">
-        <a href= "#"><img src="/Shop/pozemagazin/download.jpg"></a>
-          <h3>Devora</h3>
-        <p>49 lei</p>
-    </div>
-        </li>
-        <li>
-            <div class="icons">
-                <a href= "#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href= "#"><i class="fa-solid fa-heart" style="color:#cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href= "#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-                <h3>Jucarie mancare </h3>
-                <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-                <div class="icons">
-                    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                </div>
-                <div class="mancareDevora box">
-                    <a href="#"><img src="/Shop/pozemagazin/devora.jpeg"></a>
-                    <h3>Devora asta</h3>
-                    <p>49 lei</p>
-                </div>
-        </li>
-        <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-        </div>
-        <div class="jucarie box">
-            <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-            <h3>Jucarie ros </h3>
-            <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-    <h3>Jucarie ros </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-<a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-<a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-<a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-<a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-<h3>Jucarie mancare </h3>
-<p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-    <h3>Jucarie mancare </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="jucarie box">
-        <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-        <h3>Jucarie mancare </h3>
-        <p>15 lei</p>
-</div>
-        </li>
-    </ul>
-</div>
-<div class="produse" id="accesorii">
-    <h2>Accesorii</h2>
-    <ul class="lists">
-        <li>
-            <div class="icons">
-                <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href="#"><i class="fa-solid fa-basket-shopping" style="color:#cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg" ></a>
-                <h3>Jucarie ros </h3>
-                <p>15 lei</p>
-            </div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="mancareDevora box">
-        <a href= "#"><img src="/Shop/pozemagazin/download.jpg"></a>
-          <h3>Devora</h3>
-        <p>49 lei</p>
-    </div>
-        </li>
-        <li>
-            <div class="icons">
-                <a href= "#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href= "#"><i class="fa-solid fa-heart" style="color:#cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href= "#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-                <h3>Jucarie mancare </h3>
-                <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-                <div class="icons">
-                    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                </div>
-                <div class="mancareDevora box">
-                    <a href="#"><img src="/Shop/pozemagazin/devora.jpeg"></a>
-                    <h3>Devora asta</h3>
-                    <p>49 lei</p>
-                </div>
-        </li>
-        <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-        </div>
-        <div class="jucarie box">
-            <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-            <h3>Jucarie ros </h3>
-            <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-    <h3>Jucarie ros </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-<a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-<a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-<a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-<a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-<h3>Jucarie mancare </h3>
-<p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-    <h3>Jucarie mancare </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="jucarie box">
-        <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-        <h3>Jucarie mancare </h3>
-        <p>15 lei</p>
-</div>
-        </li>
-    </ul>
-
-    
-</div>
-<div class="produse" id="ingrijire">
-    <h2>Ingrijire</h2>
-    <ul class="lists">
-        <li>
-            <div class="icons">
-                <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href="#"><i class="fa-solid fa-basket-shopping" style="color:#cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg" ></a>
-                <h3>Jucarie ros </h3>
-                <p>15 lei</p>
-            </div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="mancareDevora box">
-        <a href= "#"><img src="/Shop/pozemagazin/download.jpg"></a>
-          <h3>Devora</h3>
-        <p>49 lei</p>
-    </div>
-        </li>
-        <li>
-            <div class="icons">
-                <a href= "#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href= "#"><i class="fa-solid fa-heart" style="color:#cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href= "#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-                <h3>Jucarie mancare </h3>
-                <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-                <div class="icons">
-                    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                </div>
-                <div class="mancareDevora box">
-                    <a href="#"><img src="/Shop/pozemagazin/devora.jpeg"></a>
-                    <h3>Devora asta</h3>
-                    <p>49 lei</p>
-                </div>
-        </li>
-        <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-        </div>
-        <div class="jucarie box">
-            <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-            <h3>Jucarie ros </h3>
-            <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-    <h3>Jucarie ros </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-<a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-<a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-<a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-<a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-<h3>Jucarie mancare </h3>
-<p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-    <h3>Jucarie mancare </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="jucarie box">
-        <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-        <h3>Jucarie mancare </h3>
-        <p>15 lei</p>
-</div>
-        </li>
-    </ul>
-</div>
-<div class="produse" id="kituri">
-    <h2>Kituri de produse</h2>
-    <ul class="lists">
-        <li>
-            <div class="icons">
-                <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href="#"><i class="fa-solid fa-basket-shopping" style="color:#cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg" ></a>
-                <h3>Jucarie ros </h3>
-                <p>15 lei</p>
-            </div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="mancareDevora box">
-        <a href= "#"><img src="/Shop/pozemagazin/download.jpg"></a>
-          <h3>Devora</h3>
-        <p>49 lei</p>
-    </div>
-        </li>
-        <li>
-            <div class="icons">
-                <a href= "#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href= "#"><i class="fa-solid fa-heart" style="color:#cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href= "#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-                <h3>Jucarie mancare </h3>
-                <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-                <div class="icons">
-                    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                </div>
-                <div class="mancareDevora box">
-                    <a href="#"><img src="/Shop/pozemagazin/devora.jpeg"></a>
-                    <h3>Devora asta</h3>
-                    <p>49 lei</p>
-                </div>
-        </li>
-        <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-        </div>
-        <div class="jucarie box">
-            <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-            <h3>Jucarie ros </h3>
-            <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-    <h3>Jucarie ros </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-<a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-<a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-<a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-<a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-<h3>Jucarie mancare </h3>
-<p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-    <h3>Jucarie mancare </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="jucarie box">
-        <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-        <h3>Jucarie mancare </h3>
-        <p>15 lei</p>
-</div>
-        </li>
-    </ul>
-</div>
-<div class="produse" id="produseRomanesti">
-    <h2>Produse Romanesti</h2>
-    <ul class="lists">
-        <li>
-            <div class="icons">
-                <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href="#"><i class="fa-solid fa-basket-shopping" style="color:#cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg" ></a>
-                <h3>Jucarie ros </h3>
-                <p>15 lei</p>
-            </div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="mancareDevora box">
-        <a href= "#"><img src="/Shop/pozemagazin/download.jpg"></a>
-          <h3>Devora</h3>
-        <p>49 lei</p>
-    </div>
-        </li>
-        <li>
-            <div class="icons">
-                <a href= "#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                <a href= "#"><i class="fa-solid fa-heart" style="color:#cedfc3;"onclick="adaugaFavorite()"></a></i>
-                <a href= "#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-            </div>
-            <div class="jucarie box">
-                <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-                <h3>Jucarie mancare </h3>
-                <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-                <div class="icons">
-                    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-                    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-                </div>
-                <div class="mancareDevora box">
-                    <a href="#"><img src="/Shop/pozemagazin/devora.jpeg"></a>
-                    <h3>Devora asta</h3>
-                    <p>49 lei</p>
-                </div>
-        </li>
-        <li>
-        <div class="icons">
-            <a href="#"><i class="fa-solid fa-shield-dog" style="color:#cedfc3;;"onclick="adaugaInAdapost()"></a></i>
-            <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-        </div>
-        <div class="jucarie box">
-            <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-            <h3>Jucarie ros </h3>
-            <p>15 lei</p>
-        </div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src="/Shop/pozemagazin/download-1.jpg"></a>
-    <h3>Jucarie ros </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-<a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-<a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-<a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-<a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-<h3>Jucarie mancare </h3>
-<p>15 lei</p>
-</div>
-        </li>
-        <li>
-<div class="icons">
-    <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-    <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;;"onclick="adaugaFavorite()"></a></i>
-    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-</div>
-<div class="jucarie box">
-    <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-    <h3>Jucarie mancare </h3>
-    <p>15 lei</p>
-</div>
-        </li>
-        <li>
-    <div class="icons">
-        <a href="#"><i class="fa-solid fa-shield-dog" style="color: #cedfc3;"onclick="adaugaInAdapost()"></a></i>
-        <a href="#"><i class="fa-solid fa-heart" style="color: #cedfc3;"onclick="adaugaFavorite()"></a></i>
-        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #cedfc3;"onclick="adaugaInCos()"></a></i>
-    </div>
-    <div class="jucarie box">
-        <a href= "#"><img src ="/Shop/pozemagazin/jucarie.jpeg"></a>
-        <h3>Jucarie mancare </h3>
-        <p>15 lei</p>
-</div>
-        </li>
-    </ul>
-
-    
-</div>
 </section>
-<div id= "footer-placeholder"></div>
+<div id="footer-placeholder"></div>
     </body>
         </html>
