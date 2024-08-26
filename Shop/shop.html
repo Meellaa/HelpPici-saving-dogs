@@ -135,61 +135,64 @@
                 <select id="optiuni-rasa" style="display: none;"></select>
             </div>
             <div class="alege">
-                <div class="Talie ch">  Talia 
-                <select>
-                    <option value = "">Mic 5-10 kg </option>
-                    <option value = "">Mediu 10-25 kg </option>
-                    <option value = "">Mare 25-45 kg </option>
-                    <option value = "">Toy -5 kg </option>
-                    <option value = "">Gigant +45 kg</option>
+                <div class="talie ch">  Talia 
+                <select id ="sizeSelect">
+                    <option value = "mic" >Mic 5-10 kg </option>
+                    <option value = "mediu" >Mediu 10-25 kg </option>
+                    <option value = "mare" >Mare 25-45 kg </option>
+                    <option value = "toy" >Toy -5 kg </option>
+                    <option value = "gigant" >Gigant +45 kg</option>
                 </select>
                 </div>
-                <div class="Varsta ch">Vârsta
-                <select>
-                    <option value = "">Pui (0-12 luni)</option>
-                    <option value = ""> Adult (1-7 ani)</option>
-                    <option value = ""> Senior (7+ ani)</option>
+                <div class="varsta ch">Vârsta
+                <select id ="ageSelect">
+                    <option value = "pui">Pui (0-12 luni)</option>
+                    <option value = "adult"> Adult (1-7 ani)</option>
+                    <option value = "senior"> Senior (7+ ani)</option>
                 </select>
                 </div>
                 <div class="activitate ch">Nivel activitate
-                <select>
-                    <option value = ""> Seducție (activitate redusă)</option>
-                    <option value = "">Moderat (activitate moderată)</option>
-                    <option value = "">Energic (activitate intensă)</option>
+                <select id ="activitySelect">
+                    <option value = "seducție"> Seducție (activitate redusă)</option>
+                    <option value = "moderat">Moderat (activitate moderată)</option>
+                    <option value = "energic ">Energic (activitate intensă)</option>
                 </select>
                 </div>
-                <div class="Preferințe ch">Opțiuni dietetice
-                    <select>
+                <div class="preferințe ch">Opțiuni dietetice
+                    <select id ="dietaryPreferencesSelect">
                         <option value = "">Niciuna</option>
-                        <option value = "">Carnivor</option>
-                        <option value = "">Vegetarian</option>
-                        <option value = "">Vegan</option>
-                        <option value = "">Fără gluten</option>
-                        <option value = "">Fără cereale</option>
-                        <option value = "">Fără carne</option>
-                        <option value = "">Fără lactoză</option>
+                        <option value = "carnivor">Carnivor</option>
+                        <option value = "vegetarian">Vegetarian</option>
+                        <option value = "vegan">Vegan</option>
+                        <option value = "faraGluten">Fără gluten</option>
+                        <option value = "faraCereale">Fără cereale</option>
+                        <option value = "faraCarne">Fără carne</option>
+                        <option value = "faraLactoza">Fără lactoză</option>
                         </select>
                 </div>
-                <div class=" Compoziție ch"> Compoziție
-                    <select>
-                        <option value = "">Bogată în carne de pui</option>
-                        <option value = "">Bogată în carne de vită</option>
-                        <option value = "">Bogată în pește</option>
-                        <option value = "">Bogată în carne de miel</option>
-                        <option value = "">Cu legume</option>
-                        <option value = "">Cu fructe</option>
-                        <option value = "">>Niciuna</option>
+                <div class=" compozitie ch"> Compoziție
+                    <select id = "compositionSelect">
+                        <option value = "pui">Bogată în carne de pui</option>
+                        <option value = "vita">Bogată în carne de vită</option>
+                        <option value = "pește">Bogată în pește</option>
+                        <option value = "miel">Bogată în carne de miel</option>
+                        <option value = "legume">Cu legume</option>
+                        <option value = "fructe">Cu fructe</option>
+                        <option value = "">Niciuna</option>
                         </select>
                 </div>
-                <div class="Textură ch">Textură
-                    <select>
-                        <option value = "">Uscat (crocant)</option>
-                        <option value = "">Umed (consistență mai moale)</option>
-                        <option value = "">Semi-umed (textură intermediară)</option>
+                <div class="textura ch">Textură
+                    <select id = "textureSelect">
+                        <option value = "uscat">Uscat (crocant)</option>
+                        <option value = "umed">Umed (consistență mai moale)</option>
+                        <option value = "semi-umed">Semi-umed (textură intermediară)</option>
                     </select>
                 </div>
             </div>
-            <div id="recomandare">Primeste recomdandare</div>
+            <div class="recomand">
+            <button id="filterAplication">Recomandare</button>
+            <div id="recommendation"></div>
+        </div>
         </div>
             <div class="phstart">
                 <h2>Puteți cumpăra direct pentru un adăpost cu livrare automată!</h2>

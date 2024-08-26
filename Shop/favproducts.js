@@ -1,4 +1,6 @@
-let favProducts= [
+
+const allProducts={
+   fav: [
     {
        id:1,
        name: "Jucarie ros",
@@ -35,46 +37,88 @@ let favProducts= [
        image: "/Shop/pozemagazin/download.jpg",
        price: "5",
    }  
-]
-let hranaProducts=[
+],
+   hrana:[
    {
-       id:21,
-       name: "HJucarie ros",
-       image: "/Shop/pozemagazin/download-1.jpg",
-       price: "15",
+        id:21,
+        name: "HJucarie ros",
+        image: "/Shop/pozemagazin/download-1.jpg",
+        price: "15",
+        breed: "Labrador",
+        size: "mare",
+        age: "adult",
+        activity: "moderat",
+        composition: "vita",
+        texture: "uscat",
+        dietaryPreferences: ""
    },
    {
-       id:22,
-       name: "HJDevora",
-       image:"/Shop/pozemagazin/download.jpg",
-       price: "95 ",
+        id:22,
+        name: "HJDevora",
+        image:"/Shop/pozemagazin/download.jpg",
+        price: "95 ",
+        breed: "Labrador",
+        size: "mare",
+        age: "adult",
+        activity: "moderat",
+        composition: "vita",
+        texture: "uscat",
+        dietaryPreferences: ""
    },
    {
        id:23,
        name: "HJucarie mancare",
        image: "/Shop/pozemagazin/jucarie.jpeg",
        price: "55",
+       breed: "Labrador",
+        size: "toy",
+        age: "senior",
+        activity: "moderat",
+        composition: "fructe",
+        texture: "semi-umed",
+        dietaryPreferences: "carnivor"
    },
    {
        id:24,
        name: "HDevora asta",
        image: "/Shop/pozemagazin/devora.jpeg",
        price: "15",
+       breed: "Labrador",
+        size: "toy",
+        age: "adult",
+        activity: "moderat",
+        composition: "miel",
+        texture: "umed",
+        dietaryPreferences: "carnivor"
    },
    {
        id:25,
        name: "HJucarie ro",
        image: "/Shop/pozemagazin/download-1.jpg",
        price: "115",
+       breed: "Labrador",
+        size: "gigant",
+        age: "pui",
+        activity: "energic",
+        composition: "legume",
+        texture: "uscat",
+        dietaryPreferences: "faraGluten"
    },
    {
        id:26,
        name: "HJDevora",
        image: "/Shop/pozemagazin/download.jpg",
        price: "5",
+       breed: "Labrador",
+        size: "gigant",
+        age: "adult",
+        activity: "energic",
+        composition: "vita",
+        texture: "umed",
+        dietaryPreferences: "faraLactoza"
    }
-]
-let dietaVeterinaraProducts= [
+],
+   dietaVeterinara: [
    {
       id:31,
       name: "Jucarie ros",
@@ -111,169 +155,159 @@ let dietaVeterinaraProducts= [
       image: "/Shop/pozemagazin/download.jpg",
       price: "5",
   }  
-]
-let recompenseProducts=[
-  {
-      id:41,
-      name: "HJucarie ros",
-      image: "/Shop/pozemagazin/download-1.jpg",
-      price: "15",
-  },
-  {
-      id:42,
-      name: "HJDevora",
-      image:"/Shop/pozemagazin/download.jpg",
-      price: "95 ",
-  },
-  {
-      id:43,
-      name: "HJucarie mancare",
-      image: "/Shop/pozemagazin/jucarie.jpeg",
-      price: "55",
-  },
-  {
-      id:44,
-      name: "HDevora asta",
-      image: "/Shop/pozemagazin/devora.jpeg",
-      price: "15",
-  },
-  {
-      id:45,
-      name: "HJucarie ro",
-      image: "/Shop/pozemagazin/download-1.jpg",
-      price: "115",
-  },
-  {
-      id:46,
-      name: "HJDevora",
-      image: "/Shop/pozemagazin/download.jpg",
-      price: "5",
-  }
-]
-let ingrijireProducts= [
+],
+    recompense:[
+    {
+        id:41,
+        name: "HJucarie ros",
+        image: "/Shop/pozemagazin/download-1.jpg",
+        price: "15",
+    },
+    {
+        id:42,
+        name: "HJDevora",
+        image:"/Shop/pozemagazin/download.jpg",
+        price: "95 ",
+    },
+    {
+        id:43,
+        name: "HJucarie mancare",
+        image: "/Shop/pozemagazin/jucarie.jpeg",
+        price: "55",
+    },
+    {
+        id:44,
+        name: "HDevora asta",
+        image: "/Shop/pozemagazin/devora.jpeg",
+        price: "15",
+    },
+    {
+        id:45,
+        name: "HJucarie ro",
+        image: "/Shop/pozemagazin/download-1.jpg",
+        price: "115",
+    },
+    {
+        id:46,
+        name: "HJDevora",
+        image: "/Shop/pozemagazin/download.jpg",
+        price: "5",
+    }
+],
+    ingrijire: [
+     {
+        id:51,
+        name: "Jucarie ros",
+        image: "/Shop/pozemagazin/download-1.jpg",
+        price: "15",
+    },
+    {
+        id:52,
+        name: "JDevora",
+        image:"/Shop/pozemagazin/download.jpg",
+        price: "95 ",
+    },
+    {
+        id:53,
+        name: "Jucarie mancare",
+        image: "/Shop/pozemagazin/jucarie.jpeg",
+        price: "55",
+    },
+    {
+        id:54,
+        name: "Devora asta",
+        image: "/Shop/pozemagazin/devora.jpeg",
+        price: "15",
+    },
+    {
+        id:55,
+        name: "Jucarie ro",
+        image: "/Shop/pozemagazin/download-1.jpg",
+        price: "115",
+    },
+    {
+        id:56,
+        name: "JDevora",
+        image: "/Shop/pozemagazin/download.jpg",
+        price: "5",
+    }  
+],
+    kituri:[
+    {
+        id:61,
+        name: "HJucarie ros",
+        image: "/Shop/pozemagazin/download-1.jpg",
+        price: "15",
+    },
+    {
+        id:62,
+        name: "HJDevora",
+        image:"/Shop/pozemagazin/download.jpg",
+        price: "95 ",
+    },
+    {
+        id:63,
+        name: "HJucarie mancare",
+        image: "/Shop/pozemagazin/jucarie.jpeg",
+        price: "55",
+    },
+    {
+        id:64,
+        name: "HDevora asta",
+        image: "/Shop/pozemagazin/devora.jpeg",
+        price: "15",
+    },
+    {
+        id:65,
+        name: "HJucarie ro",
+        image: "/Shop/pozemagazin/download-1.jpg",
+        price: "115",
+    },
+    {
+        id:66,
+        name: "HJDevora",
+        image: "/Shop/pozemagazin/download.jpg",
+        price: "5",
+    }
+  ],
+  produseRomanesti:[
+    {
+       id:71,
+       name: "Jucarie ros",
+       image: "/Shop/pozemagazin/download-1.jpg",
+       price: "15",
+   },
    {
-      id:51,
-      name: "Jucarie ros",
-      image: "/Shop/pozemagazin/download-1.jpg",
-      price: "15",
-  },
-  {
-      id:52,
-      name: "JDevora",
-      image:"/Shop/pozemagazin/download.jpg",
-      price: "95 ",
-  },
-  {
-      id:53,
-      name: "Jucarie mancare",
-      image: "/Shop/pozemagazin/jucarie.jpeg",
-      price: "55",
-  },
-  {
-      id:54,
-      name: "Devora asta",
-      image: "/Shop/pozemagazin/devora.jpeg",
-      price: "15",
-  },
-  {
-      id:55,
-      name: "Jucarie ro",
-      image: "/Shop/pozemagazin/download-1.jpg",
-      price: "115",
-  },
-  {
-      id:56,
-      name: "JDevora",
-      image: "/Shop/pozemagazin/download.jpg",
-      price: "5",
-  }  
-]
-let kiturProducts=[
-  {
-      id:61,
-      name: "HJucarie ros",
-      image: "/Shop/pozemagazin/download-1.jpg",
-      price: "15",
-  },
-  {
-      id:62,
-      name: "HJDevora",
-      image:"/Shop/pozemagazin/download.jpg",
-      price: "95 ",
-  },
-  {
-      id:63,
-      name: "HJucarie mancare",
-      image: "/Shop/pozemagazin/jucarie.jpeg",
-      price: "55",
-  },
-  {
-      id:64,
-      name: "HDevora asta",
-      image: "/Shop/pozemagazin/devora.jpeg",
-      price: "15",
-  },
-  {
-      id:65,
-      name: "HJucarie ro",
-      image: "/Shop/pozemagazin/download-1.jpg",
-      price: "115",
-  },
-  {
-      id:66,
-      name: "HJDevora",
-      image: "/Shop/pozemagazin/download.jpg",
-      price: "5",
-  }
-]
-let produseRomanestiProducts= [
-  {
-     id:71,
-     name: "Jucarie ros",
-     image: "/Shop/pozemagazin/download-1.jpg",
-     price: "15",
- },
- {
-     id:72,
-     name: "JDevora",
-     image:"/Shop/pozemagazin/download.jpg",
-     price: "95 ",
- },
- {
-     id:73,
-     name: "Jucarie mancare",
-     image: "/Shop/pozemagazin/jucarie.jpeg",
-     price: "55",
- },
- {
-     id:74,
-     name: "Devora asta",
-     image: "/Shop/pozemagazin/devora.jpeg",
-     price: "15",
- },
- {
-     id:75,
-     name: "Jucarie ro",
-     image: "/Shop/pozemagazin/download-1.jpg",
-     price: "115",
- },
- {
-     id:76,
-     name: "JDevora",
-     image: "/Shop/pozemagazin/download.jpg",
-     price: "5",
- }  
-]
-
-const allProducts ={
-   fav:favProducts,
-   hrana:hranaProducts,
-   dietaVeterinara:dietaVeterinaraProducts,
-   recompense:recompenseProducts,
-   ingrijire:ingrijireProducts,
-   kituri:kiturProducts,
-   produseRomanesti:produseRomanestiProducts
-};
+       id:72,
+       name: "JDevora",
+       image:"/Shop/pozemagazin/download.jpg",
+       price: "95 ",
+   },
+   {
+       id:73,
+       name: "Jucarie mancare",
+       image: "/Shop/pozemagazin/jucarie.jpeg",
+       price: "55",
+   },
+   {
+       id:74,
+       name: "Devora asta",
+       image: "/Shop/pozemagazin/devora.jpeg",
+       price: "15",
+   },
+   {
+       id:75,
+       name: "Jucarie ro",
+       image: "/Shop/pozemagazin/download-1.jpg",
+       price: "115",
+   },
+   {
+       id:76,
+       name: "JDevora",
+       image: "/Shop/pozemagazin/download.jpg",
+       price: "5",
+   }  
+  ]};
 
 const body = document.querySelector("body"),
     produse = document.querySelector(".lists"),
@@ -350,7 +384,7 @@ function pProducts(products, container, productType) {
        container.appendChild(li);
    });
 }
-pProducts(favProducts, produse, 'fav');
+pProducts(allProducts.fav, produse, 'fav');
 
 function addToCart(type, Id){
    let allProduct = allProducts[type];
@@ -365,7 +399,7 @@ function addToCart(type, Id){
         close: true,
         gravity: "top", // `top` sau `bottom`
         position: "right", // `left`, `center` sau `right`
-        backgroundColor: "linear-gradient(to right, rgb(118, 145, 118), rgb(113, 52, 99))",
+        background: "linear-gradient(to right, rgb(118, 145, 118), rgb(113, 52, 99))",
         color: "#cedfc3",
         borderRadius: "7px",
     }).showToast();
@@ -386,7 +420,7 @@ if (!cosAsociatie[Id] ){
         close: true,
         gravity: "top", // `top` sau `bottom`
         position: "right", // `left`, `center` sau `right`
-        backgroundColor: "linear-gradient(to right, rgb(118, 145, 118), rgb(113, 52, 99))",
+        background: "linear-gradient(to right, rgb(118, 145, 118), rgb(113, 52, 99))",
         color: "#cedfc3",
         borderRadius: "7px",
     }).showToast();
@@ -409,7 +443,7 @@ function addToFavorite(type, Id) {
             close: true,
             gravity: "top", // `top` sau `bottom`
             position: "right", // `left`, `center` sau `right`
-            backgroundColor: "linear-gradient(to right, rgb(118, 145, 118), rgb(113, 52, 99))",
+            background: "linear-gradient(to right, rgb(118, 145, 118), rgb(113, 52, 99))",
             color: "#cedfc3",
             borderRadius: "7px",
         }).showToast();
@@ -626,4 +660,63 @@ submenu.addEventListener('mouseenter', function(){
 submenu.addEventListener('mouseleave', function() {
     subsubmenu.style.display = 'none';
 });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const selectElements = {
+        size : document.querySelector(".talie select"),
+        age : document.querySelector(".varsta select"),
+        activity : document.querySelector(".activitate select"),
+        dietaryPreferences : document.querySelector(".preferințe select"),
+        composition : document.querySelector(".compozitie select"),
+        texture : document.querySelector(".textura select"),
+    };
+    const filterAplication = document.getElementById('filterAplication');
+    const recommendation = document.getElementById('recommendation');
+    
+    const displayProducts = (pProducts) => {
+        recommendation.innerHTML = ""; 
+    
+        if (pProducts.length === 0) {
+            recommendation.innerHTML = "Nu sunt produse care să corespundă filtrului.";
+            return;
+        };
+      
+        pProducts.forEach(product => {
+            const productElement = document.createElement('div');
+            productElement.className = 'product';
+            productElement.innerHTML = `
+            <a href ="${product.url || '/Shop/hrana'}" target="_blank">
+                <img src="${product.image}" alt="${product.name}">
+                <h3>${product.name}</h3>
+            </a>
+                `;
+            recommendation.appendChild(productElement);
+        });
+    };
+    const updateProducts = () => {
+    const size = selectElements.size.value;
+    const age = selectElements.age.value;
+    const activity = selectElements.activity.value;
+    const dietaryPreferences = selectElements.dietaryPreferences.value;
+    const composition = selectElements.composition.value;
+    const texture = selectElements.texture.value;
+
+const filteredProducts = allProducts.hrana.filter(product =>{
+    return (size === "" || product.size === size) &&
+            (age === "" || product.age === age) &&
+            (activity === "" || product.activity === activity) &&
+            (composition === "" || product.composition === composition) &&
+            (texture === "" || product.texture === texture) &&
+            (dietaryPreferences === "" || product.dietaryPreferences === dietaryPreferences)
+});
+console.log("filteredProducts :",filteredProducts);
+
+displayProducts(filteredProducts);
+};
+
+
+    filterAplication.addEventListener('click', updateProducts);
 });
