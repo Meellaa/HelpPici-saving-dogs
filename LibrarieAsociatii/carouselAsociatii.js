@@ -311,10 +311,11 @@ const asociatii = [
     about: 'Asociatia Silvania orem ipsum dolor sit amet consectetur adipisicing elit. Numquam repellendus placeat odio necessitatibus quod ea possimus eos autem culpa eveniet voluptas debitis, optio voluptatum, nemo nisi deserunt fuga odit praesentium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam neque dolor accusantium? Dignissimos reprehenderit nihil dolore! Accusamus nulla deleniti, dolorum debitis corrupti laudantium ducimus labore, ut nemo facilis, ad voluptas.'    
 },
 ]
-function generateAsociatii(){
+
+function generateAsociatii(asociatiiList = asociatii){
     const container = document.getElementById('asociatii-container');
     container.innerHTML = '';
-    asociatii.forEach(asociatie =>{
+    asociatiiList.forEach(asociatie =>{
         const sectiune = document.createElement('section');
         sectiune.classList.add('sect-asociatie');
         sectiune.id = asociatie.id;
@@ -348,7 +349,6 @@ function generateAsociatii(){
 
         <ul class="carosel">
             ${asociatie.dogs.map(dog => `
-         
             <img class="btn-left but" src="/LibrarieAsociatii/pozelibrarie/pngegg.png">
                 <li class="card">
                     <img src="${dog.image}" alt="${dog.name}">
@@ -435,3 +435,20 @@ nextBtns.forEach(nextBtn => {
     });
 });
 }
+document.querySelector('form').addEventListener('submit', function(e){
+  e.preventDefault();
+  console.log('sfgdbhfg');
+  const searchLocation = document.getElementById('location').value.trim().toLowerCase();
+  const searchName = document.getElementById('search-name').value.trim().toLowerCase();
+
+  console.log('Locație căutată:', searchLocation);
+  console.log('Nume căutat:', searchName);
+
+  const filteredAsociatii =asociatii.filter(asociatie => {
+    const matchLocation =searchLocation === '' || asociatie.location.toLocaleLowerCase().includes(searchLocation);
+    const matchName = searchName === '' || asociatie.name.toLowerCase().includes(searchName);
+    const matchDogName = asociatie.dogs.some(dog => dog.name.toLowerCase().includes(searchName));
+   return matchLocation && (matchName || matchDogName); 
+  });
+  generateAsociatii(filteredAsociatii);
+});

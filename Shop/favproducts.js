@@ -716,7 +716,5 @@ console.log("filteredProducts :",filteredProducts);
 
 displayProducts(filteredProducts);
 };
-
-
     filterAplication.addEventListener('click', updateProducts);
 });
